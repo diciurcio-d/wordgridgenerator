@@ -36,7 +36,7 @@ ax.set_yticks(np.arange(-.5, 5, 1));
 ax.set_yticklabels([])
 ax.set_xticklabels([])
 
-plt.savefig('new_codenames_grid.png')
+plt.savefig('new_color_grid.png')
 
 me = raw_input("Please enter the sender email: ")
 my_password = getpass("Type your password and press enter: ")
@@ -54,7 +54,7 @@ part2 = MIMEText(html, 'html')
 
 msg.attach(part2)
 
-fp = open('new_codenames_grid.png', 'rb')
+fp = open('new_color_grid.png', 'rb')
 msgImage = MIMEImage(fp.read())
 fp.close()
 
