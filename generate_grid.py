@@ -8,6 +8,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from getpass import getpass
+import six
 
 color = random.randint(0, 1)
 core_spaces = [0]*8 + [1]*8 + [2]*7 + [3]
@@ -38,10 +39,10 @@ ax.set_xticklabels([])
 
 plt.savefig('new_color_grid.png')
 
-me = raw_input("Please enter the sender email: ")
+me = six.moves.input("Please enter the sender email: ")
 my_password = getpass("Type your password and press enter: ")
-you1 = raw_input("Please enter email1: ")
-you2 = raw_input("Please enter email2: ")
+you1 = six.moves.input("Please enter email1: ")
+you2 = six.moves.input("Please enter email2: ")
 you = ", ".join([you1,you2])
 
 msg = MIMEMultipart('alternative')
